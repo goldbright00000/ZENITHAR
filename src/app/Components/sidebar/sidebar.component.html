@@ -1,0 +1,96 @@
+<app-headerbar></app-headerbar>
+<div class="dashboard-page-main">
+    <div class="sidebar-combine">
+        <div class="sidebar-main">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item" (click)="addclass()">
+                        <i class="fa-solid fa-angle-right right_arrow"></i>
+                    </li>
+                    <li class="nav-item">
+                        <img src="../../../assets/Images/dropbox.png" width="24px" alt="">
+                    </li>
+                    <li class="nav-item">
+                        <img src="../../../assets/Images/Document.png" width="24px"
+                            alt="">
+                    </li>
+                    <li class="nav-item">
+                        <img src="../../../assets/Images/flodersettgings.png" width="24px"
+                            alt="">
+                    </li>
+                    <li class="nav-item">
+                        <img src="../../../assets/Images/chatt.png" width="24px" alt="">
+                    </li>
+                    <li class="nav-item">
+                        <img src="../../../assets/Images/Settgins.png" width="24px"
+                            alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div [ngClass]="isaddclass?'active sidebar-second':'sidebar-second'">
+            <div class="top">
+                <div class="title">
+                    <h4>Navigation</h4>
+                </div>
+                <div class="menu">
+                    <ul class="m-0 p-0">
+                        <li class=""><i class="fa-solid fa-book book"></i>Standard
+                            Assessments</li>
+                        <li class="main_menu"><i class="fa-regular
+                                fa-pen-to-square book"></i>Custom Assessments</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="droupdown_title">
+                <p>Filter By</p>
+            </div>
+            <div class="top">
+                <div class="title">
+                    <h4>Country</h4>
+                </div>
+                <div class="menu">
+                    <select class="select_theme" style="appearance: none;"
+                        aria-label=".form-select-lg example">
+                        <option selected>All Countries</option>
+                    </select>
+                    <img src="../../../assets/Images/up-down.png" class="up-down" alt="">
+                </div>
+            </div>
+            <div class="top">
+                <div class="title">
+                    <h4>Industry</h4>
+                </div>
+                <div class="menu">
+                    <div class="menu">
+                        <select class="select_theme" style="appearance: none;"
+                            aria-label=".form-select-lg example">
+                            <option selected>All Industries</option>
+
+                        </select>
+                        <img src="../../../assets/Images/up-down.png" class="up-down"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="top">
+                <div class="title">
+                    <h4>Job Family</h4>
+                </div>
+                <div class="menu">
+                    <div class="menu">
+                        <select class="select_theme" style="appearance: none;"
+                            aria-label=".form-select-lg example">
+                            <option selected>--</option>
+                        </select>
+                        <img src="../../../assets/ImagesImagesImagesImages/up-down.png" class="up-down"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="isaddclass?'active assessments':'assessments'">
+        <app-assessments class=""></app-assessments>
+    </div>
+</div>
